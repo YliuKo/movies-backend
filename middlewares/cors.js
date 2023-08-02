@@ -1,8 +1,8 @@
 const allowedCors = [
-  'https://krasnova.nomoredomains.rocks',
-  'http://krasnova.nomoredomains.rocks',
-  'https://api.krasnova.nomoredomains.rocks',
-  'http://api.krasnova.nomoredomains.rocks',
+  'https://movies.yuiko.nomoreparties.co',
+  'http://movies.yuiko.nomoreparties.co',
+  'https://api.movies.yuiko.nomoreparties.co',
+  'http://api.movies.yuiko.nomoreparties.co',
   'localhost:3000',
   'http://localhost:3000',
   'https://localhost:3000',
