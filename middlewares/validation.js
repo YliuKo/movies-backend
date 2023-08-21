@@ -1,8 +1,9 @@
-const REGEXP = /https?:\/\/(www\.)?[a-z0-9.-]{2,}\.[a-z]{2,}\/?[-._~:/?#[\]@!$&'()*+,;=]*/;
+const REGEXP =
+  /https?:\/\/(www\.)?[a-z0-9.-]{2,}\.[a-z]{2,}\/?[-._~:/?#[\]@!$&'()*+,;=]*/;
 
-const URL_DB_DEV = 'mongodb://127.0.0.1:27017/bitfilmsdb';
+const URL_DB_DEV = "mongodb://127.0.0.1:27017/bitfilmsdb";
 
-const { celebrate, Joi } = require('celebrate');
+const { celebrate, Joi } = require("celebrate");
 
 // auth
 const singupValid = celebrate({
@@ -39,7 +40,7 @@ const addMovieValid = celebrate({
 
 const moviesIdValid = celebrate({
   params: Joi.object().keys({
-    moviesId: Joi.string().length(24).hex().required(),
+    moviesId: Joi.string().required(),
   }),
 });
 
@@ -64,5 +65,5 @@ module.exports = {
   singinValid,
   addMovieValid,
   moviesIdValid,
-  editUserValid
+  editUserValid,
 };
