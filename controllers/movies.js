@@ -43,11 +43,11 @@ module.exports.deleteMovie = (req, res, next) => {
   const { movieId: id } = req.params;
 
   movieSchema
-    .findById({ movieId: id })
+    .findOne({ movieId: id })
     .then((movie) => {
       if (!movie) {
         throw new NotFound(movieIdNotFoundText);
-      } else if (!movie.owner.equals(req.user._id)) {
+      } else if (movie.owner.toString() !== req.user._id) {
         throw new Forbidden(movieForbiddenText);
       } else {
         movie
