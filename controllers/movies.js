@@ -40,7 +40,7 @@ module.exports.addMovie = (req, res, next) => {
 
 // удаляем movie
 module.exports.deleteMovie = (req, res, next) => {
-  const { moviesId: id } = req.params;
+  const { movieId: id } = req.params;
 
   movieSchema
     .findById({ movieId: id })
